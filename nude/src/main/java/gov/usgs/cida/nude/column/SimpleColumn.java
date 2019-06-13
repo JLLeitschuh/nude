@@ -24,9 +24,9 @@ public class SimpleColumn implements Column, Serializable {
 	}
 	
 	public SimpleColumn(String column, String table, String schema, Class<?> type, boolean isDisplayable) {
-		this.columnName = (StringUtils.isNotBlank(column))?column:"";
-		this.tableName = (StringUtils.isNotBlank(table))?table:"";
-		this.schemaName = (StringUtils.isNotBlank(schema))?schema:"";
+		this.columnName = (StringUtils.isNotBlank(column))?column.toUpperCase():"";
+		this.tableName = "";
+		this.schemaName = (StringUtils.isNotBlank(schema))?schema.toUpperCase():"";
 		this.valueType = type;
 		this.isDisplay = isDisplayable;
 	}
