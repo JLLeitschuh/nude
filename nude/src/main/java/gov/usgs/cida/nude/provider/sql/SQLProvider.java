@@ -49,7 +49,8 @@ public class SQLProvider implements IProvider {
 		try {
 			result.setHoldability(ResultSet.HOLD_CURSORS_OVER_COMMIT);
 		} catch (SQLFeatureNotSupportedException e) {
-			log.warn("Unable to get holdable connection. Exception: ", e);
+			log.error("Unable to get holdable connection. Exception: ", e);
+			throw e;
 		}
 
 		return result;
