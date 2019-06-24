@@ -42,6 +42,19 @@ public class SQLProvider implements IProvider {
 		
 		log.trace("Initialized SQLProvider " + this.hashCode());
 	}
+
+	public Connection getHoldableConnection(UUID requestId) throws SQLException, NamingException, ClassNotFoundException {
+		Connection result = getConnection(requestId);
+
+		try {
+			result.setHoldability(ResultSet.HOLD_CURSORS_OVER_COMMIT);
+		} catch (SQLFeatureNotSupportedException e) {
+			log.error("Unable to get holdable connection. Exception: ", e);
+			throw e;
+		}
+
+		return result;
+	}
 	
 	public Connection getConnection(UUID requestId) throws SQLException, NamingException, ClassNotFoundException {
 		Connection result = null;
