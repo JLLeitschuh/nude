@@ -75,12 +75,12 @@
 		<repository>
 			<id>cida-public-releases</id>
 			<name>CIDA Public Releases</name>
-			<url>http://internal.cida.usgs.gov/maven/content/repositories/cida-public-releases/</url>
+			<url>https://internal.cida.usgs.gov/maven/content/repositories/cida-public-releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>cida-public-snapshots</id>
 			<name>CIDA Public Snapshots</name>
-			<url>http://internal.cida.usgs.gov/maven/content/repositories/cida-public-snapshots/</url>
+			<url>https://internal.cida.usgs.gov/maven/content/repositories/cida-public-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -88,12 +88,12 @@
 		<repository>
 			<id>nexus</id>
 			<name>CIDA Public Nexus</name>
-			<url>http://cida.usgs.gov/maven/cida-public</url>
+			<url>https://cida.usgs.gov/maven/cida-public</url>
 		</repository>
 		<repository>
 			<id>akka.repository</id>
 			<name>Akka Maven Repository</name>
-			<url>http://repo.akka.io/releases/</url>
+			<url>https://repo.akka.io/releases/</url>
 		</repository>
 	</repositories>
 
@@ -101,7 +101,7 @@
 		<pluginRepository>
 			<id>plugin-nexus</id>
 			<name>CIDA Plugin repo</name>
-			<url>http://cida.usgs.gov/maven/cida-public</url>
+			<url>https://cida.usgs.gov/maven/cida-public</url>
 		</pluginRepository>
 	</pluginRepositories>
 
